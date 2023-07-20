@@ -2,7 +2,7 @@ import {
   BrowserRouter, Link, Route, Routes,
 } from 'react-router-dom';
 import './App.css';
-import Authors from './components/Authors';
+import Categories from './components/Categories';
 import Books from './components/Books';
 
 function App() {
@@ -16,13 +16,13 @@ function App() {
           </h1>
           <ul className="header-ul">
             <li><Link className="header-ul-link" to="/">Books</Link></li>
-            <li><Link className="header-ul-link" to="/authors">Authors</Link></li>
+            <li><Link className="header-ul-link" to="/categories">Categories</Link></li>
           </ul>
         </header>
 
         <Routes>
           <Route path="/" element={<Books />} />
-          <Route path="/authors" element={<Authors />} />
+          <Route path="/categories" element={<Categories />} />
         </Routes>
       </BrowserRouter>
     </div>
