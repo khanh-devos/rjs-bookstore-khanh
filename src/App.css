@@ -33,7 +33,7 @@ body {
   text-decoration: none;
 }
 
-.books-ul-li {
+.book-li {
   list-style: none;
   display: flex;
   flex-direction: row;

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import AddNewBook from './AddNewBook';
+import BookItem from './BookItem';
 import BOOKS from './data';
 
 export default function Books() {
@@ -13,16 +14,18 @@ export default function Books() {
   return (
     <div className="books">
       <AddNewBook setBook={setBook} />
+
       <ul className="books-ul">
         {
-      books.map((b) => (
-        <li className="books-ul-li" key={uuidv4()}>
-          <h3>{b.title}</h3>
-          <button type="button" name={b.id} onClick={handleDelete}>del</button>
-        </li>
+      books.map((book) => (
+        <BookItem
+          key={uuidv4()}
+          title={book.title}
+          id={book.id}
+          handleDelete={handleDelete}
+        />
       ))
-
-    }
+      }
       </ul>
     </div>
   );
