@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  categories: [],
+  categories: ['Under construction'],
   amount: 0,
   isLoading: true,
 };
