@@ -8,12 +8,12 @@ export default function BookItem({ title, id }) {
     <li className="book-li">
       <h3>{title}</h3>
       <button
-        type="button" 
-        name={id} 
+        type="button"
+        name={id}
         onClick={() => dispatch(removeBook(id))}
-        >
-          del
-        </button>
+      >
+        del
+      </button>
     </li>
   );
 }
