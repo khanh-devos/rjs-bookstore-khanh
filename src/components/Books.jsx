@@ -1,19 +1,14 @@
-import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { useSelector } from 'react-redux';
 import AddNewBook from './AddNewBook';
 import BookItem from './BookItem';
-import BOOKS from './data';
 
 export default function Books() {
-  const [books, setBook] = useState(BOOKS);
-  const handleDelete = (e) => {
-    const newBooks = books.filter((b) => b.id.toString() !== e.currentTarget.name);
-    setBook(newBooks);
-  };
+  const { books } = useSelector((store) => store.book);
 
   return (
     <div className="books">
-      <AddNewBook setBook={setBook} />
+      <AddNewBook />
 
       <ul className="books-ul">
         {
@@ -22,7 +17,6 @@ export default function Books() {
           key={uuidv4()}
           title={book.title}
           id={book.id}
-          handleDelete={handleDelete}
         />
       ))
       }

@@ -1,6 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:wght@500;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Rajdhani:wght@500;700&display=swap");
 
+:root {
+  --padding: 15em;
+  --addNewBookForm: row;
+
+  @media screen and (max-width: 765px) {
+    --padding: 1em;
+    --addNewBookForm: column;
+  }
+}
+
 * {
   font-size: 14px;
   font-family: Lato, fantasy;
@@ -10,7 +20,7 @@
 }
 
 body {
-  padding: 1em 15em;
+  padding: 2em var(--padding);
   background: rgb(178, 241, 178);
 }
 
@@ -44,7 +54,17 @@ body {
 
 .addnewbook {
   display: flex;
-  flex-direction: row;
+  flex-direction: var(--addNewBookForm);
   gap: 0.2em;
   margin: 1em 0;
+}
+
+.anb-input {
+  width: 15em;
+  font-size: 1.2em;
+}
+
+.btn-type1 {
+  width: 5em;
+  font-size: 1.2em;
 }
