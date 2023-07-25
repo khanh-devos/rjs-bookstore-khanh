@@ -1,24 +1,16 @@
 import { PropTypes } from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/bookSlice';
+import Button from './Button';
 
-export default function BookItem({ title, id }) {
-  const dispatch = useDispatch();
+export default function BookItem({ title, itemId }) {
   return (
     <li className="book-li">
-      <h3>{title}</h3>
-      <button
-        type="button"
-        name={id}
-        onClick={() => dispatch(removeBook(id))}
-      >
-        del
-      </button>
+      <h3 className="book-title-h3">{title}</h3>
+      <Button itemId={itemId} />
     </li>
   );
 }
 
 BookItem.propTypes = {
   title: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  itemId: PropTypes.string.isRequired,
 };
