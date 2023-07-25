@@ -1,22 +1,22 @@
-const BOOKS = [
+export const BOOKS = [
   {
-    id: 1,
-    title: 'book1',
-    author: 'a1',
-    sold: 20,
+    item_id: 'item1',
+    title: 'The Great Gatsby',
+    author: 'John Smith',
+    category: 'Fiction',
   },
   {
-    id: 2,
-    title: 'book2',
-    author: 'a2',
-    sold: 10,
+    item_id: 'item2',
+    title: 'Anna Karenina',
+    author: 'Leo Tolstoy',
+    category: 'Fiction',
   },
   {
-    id: 3,
-    title: 'book3',
-    author: 'a3',
-    sold: 10,
+    item_id: 'item3',
+    title: 'The Selfish Gene',
+    author: 'Richard Dawkins',
+    category: 'Nonfiction',
   },
 ];
 
-export default BOOKS;
+export const CATEGORY = ['Fiction', 'Nonfiction'];

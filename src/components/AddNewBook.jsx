@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { addBook } from '../redux/books/bookSlice';
+import { CATEGORY } from './data';
 
 export default function AddNewBook() {
   const dispatch = useDispatch();
@@ -9,11 +10,13 @@ export default function AddNewBook() {
     const form = e.currentTarget;
     const [title, author] = [form.title.value, form.author.value];
     if (!title.trim() || !author.trim()) return;
+
+    const itemId = `item${books.length + 1}`;
     const newBook = {
-      id: books[Math.max(books.length - 1, 0)].id + 1,
+      item_id: itemId,
       title,
       author,
-      sold: Math.floor(Math.random() * 100),
+      category: CATEGORY[Math.floor(Math.random() * 100) % 2],
     };
 
     dispatch(addBook(newBook));

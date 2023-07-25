@@ -47,9 +47,13 @@ body {
   list-style: none;
   display: flex;
   flex-direction: row;
-  width: 10em;
+  width: 20em;
   justify-content: space-between;
   margin: 0.2em 0;
+}
+
+.book-title-h3 {
+  flex: 1;
 }
 
 .addnewbook {

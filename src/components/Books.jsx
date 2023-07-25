@@ -16,7 +16,7 @@ export default function Books() {
         <BookItem
           key={uuidv4()}
           title={book.title}
-          id={book.id}
+          itemId={book.item_id}
         />
       ))
       }
