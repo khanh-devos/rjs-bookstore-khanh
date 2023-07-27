@@ -29,7 +29,7 @@
 
 # 📖 [Bookstore] <a name="about-project"></a>
 
-**Bookstore** is a website showing a list of books. Users can add a new book, remove a book.
+**Bookstore** is a website showing a list of books. Users can add a new book, remove a book. While building, we use Reactjs with React-Redux.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -39,6 +39,7 @@
   <summary>Client</summary>
   <ul>
     <li><a href="#">React</a></li>
+    <li><a href="#">Redux</a></li>
   </ul>
 </details>
 
