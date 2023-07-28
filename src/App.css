@@ -1,13 +1,29 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:wght@500;700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Rajdhani:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 :root {
-  --padding: 15em;
+  --padding: 9.2rem 6.25rem;
+  --headerHoriPadding: 6.2rem;
   --addNewBookForm: row;
+  --bookligrid: 2fr 1fr;
+  --chapterPadLeft: 3.8rem;
+  --chapterPadTop: 0;
+
+  @media screen and (max-width: 1100px) {
+    --padding: 1rem 2rem;
+    --headerHoriPadding: 2rem;
+    --bookligrid: 1fr;
+    --chapterPadLeft: 1.8rem;
+    --chapterPadTop: 0.5rem;
+  }
 
   @media screen and (max-width: 765px) {
-    --padding: 1em;
+    --padding: 1rem 1rem;
     --addNewBookForm: column;
+    --headerHoriPadding: 1rem;
+    --bookligrid: 1fr;
+    --chapterPadLeft: 0.5rem;
+    --chapterPadTop: 0.5rem;
   }
 }
 
@@ -20,55 +36,256 @@
 }
 
 body {
-  padding: 2em var(--padding);
-  background: rgb(178, 241, 178);
+  padding: var(--padding);
+  background: #f5f6fa;
+}
+
+.App {
+  box-shadow: 2rem 4rem 4rem 2rem rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background: #fff;
+  min-height: 40rem;
+  max-height: 100rem;
+  overflow: auto;
+  padding-bottom: 7rem;
 }
 
 .header {
+  position: relative;
+  height: 6rem;
+  padding: 1.8rem var(--headerHoriPadding);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: baseline;
+}
+
+.header-h1 {
+  font-size: 2rem;
+  font-family: Montserrat, fantasy;
+  font-weight: bolder;
+  color: #0290ff;
 }
 
 .header-ul {
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: 1rem;
   list-style: none;
   margin-left: 2em;
 }
 
 .header-ul-link {
   text-decoration: none;
+  font-family: Montserrat, fantasy;
+  color: #121212;
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.header-icon {
+  position: absolute;
+  top: 1.4rem;
+  right: var(--headerHoriPadding);
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  outline: auto #e8e8e8;
+}
+
+.books {
+  padding: 0 var(--headerHoriPadding);
+  padding-bottom: 16rem;
 }
 
 .book-li {
+  padding: 2rem 1.7rem;
   list-style: none;
-  display: flex;
-  flex-direction: row;
-  width: 20em;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: var(--bookligrid);
   margin: 0.2em 0;
 }
 
-.book-title-h3 {
-  flex: 1;
+.book-li-part-2 {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  justify-content: flex-start;
+  gap: 0.2rem;
 }
 
-.addnewbook {
+.circular-progress {
+  width: 4rem;
+  height: 4rem;
+}
+
+.circular-running-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+  justify-content: center;
+  padding-right: var(--chapterPadLeft);
+  padding-top: var(--chapterPadTop);
+  border-right: 0.1rem solid #dadada;
+}
+
+.percentage {
+  font-family: Montserrat, fantasy;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.chapter-container {
+  padding-left: var(--chapterPadLeft);
+  padding-top: var(--chapterPadTop);
+}
+
+.child-chapter-container {
+  margin: auto;
+  width: 19rem;
+}
+
+.current-chapter {
+  opacity: 0.5;
+  font-family: Roboto, fantasy;
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: #121212;
+}
+
+.chapter-number {
+  font-family: Roboto, fantasy;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: #121212;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.add-newB-container {
+  border-top: 0.2rem solid #e8e8e8;
+  margin-top: 2.5rem;
+  padding-top: 1.8rem;
+}
+
+.addnewbook-form {
   display: flex;
   flex-direction: var(--addNewBookForm);
-  gap: 0.2em;
+  gap: 2em;
   margin: 1em 0;
 }
 
 .anb-input {
-  width: 15em;
+  flex: 1;
+  height: 2.8rem;
   font-size: 1.2em;
+  font-family: Montserrat, fantasy;
+  letter-spacing: -0.15px;
+  border: 0.01rem solid #ddd;
+  padding: 1rem 1rem;
+  border-radius: 0.4rem;
+}
+
+.anb-input:focus-within {
+  outline: none;
 }
 
 .btn-type1 {
-  width: 5em;
-  font-size: 1.2em;
+  width: 11.5rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9em;
+  background: #0290ff;
+  border-radius: 0.2rem;
+  border: none;
+  font-family: Roboto, fantasy;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.btn-type1:hover {
+  box-shadow: 0.01rem 0.2rem 0.01rem 0.01rem #00508d;
+}
+
+.btn-type1:active {
+  box-shadow: none;
+  translate: 0 0.1rem;
+}
+
+.btn-type-2 {
+  border: none;
+  background: none;
+}
+
+.btn-type-2:hover {
+  font-weight: bolder;
+}
+
+.anb-button {
+  width: 11rem;
+  height: 2.8rem;
+  font-family: Roboto, fantasy;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.book-category-h3 {
+  opacity: 0.5;
+  font-family: Montserrat, fantasy;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #121212;
+}
+
+.book-title-h3 {
+  font-family: Roboto, fantasy;
+  font-size: 1.375rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: #121212;
+  height: 2rem;
+}
+
+.book-author-h3 {
+  font-family: Roboto, fantasy;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.title-btn-container {
+  margin-top: 1.3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.add-nb-title {
+  font-family: Montserrat, fantasy;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.category {
+  padding: 0 var(--headerHoriPadding);
+}
+
+.right-line {
+  border-right: 0.1rem solid #dadada;
+  border-left: 0.1rem solid #dadada;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
