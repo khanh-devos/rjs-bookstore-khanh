@@ -36,7 +36,7 @@ export default function BookItem({
       <Title title={title} category={category} author={author} itemId={itemId} />
 
       <div className="book-li-part-2">
-        <div className="circular-running-container right-line">
+        <div className="circular-running-container">
           <div className="circular-progress">
             <CircularProgressbarWithChildren value={percentage} styles={myStyle} />
           </div>
@@ -44,18 +44,20 @@ export default function BookItem({
           <RunningNumber num={percentage} />
         </div>
 
-        <div className="btn-container">
-          <h3 className="current-chapter">CURRENT CHAPTER</h3>
-          <h4 className="chapter-number">
-            {`Chapter ${parseInt(Math.random() * 10, 10)}`}
-            {itemId[itemId.length - 1]}
-          </h4>
-          <button
-            type="button"
-            className="btn-type1"
-          >
-            UPDATE PROGRESS
-          </button>
+        <div className="chapter-container">
+          <div className="child-chapter-container">
+            <h3 className="current-chapter">CURRENT CHAPTER</h3>
+            <h4 className="chapter-number">
+              {`Chapter ${parseInt(Math.random() * 10, 10)}`}
+              {itemId[itemId.length - 1]}
+            </h4>
+            <button
+              type="button"
+              className="btn-type1"
+            >
+              UPDATE PROGRESS
+            </button>
+          </div>
         </div>
 
       </div>

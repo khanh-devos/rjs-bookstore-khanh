@@ -31,9 +31,9 @@ export default function AddNewBook() {
   }, [amount, dispatch]);
 
   return (
-    <div>
+    <div className="add-newB-container">
       <header className="add-nb-title">ADD NEW BOOK</header>
-      <form className="addnewbook" onSubmit={handleSubmit}>
+      <form className="addnewbook-form" onSubmit={handleSubmit}>
         <input className="anb-input" required name="title" type="text" placeholder="Book Title" />
         <input className="anb-input" required name="author" type="text" placeholder="Author" />
 

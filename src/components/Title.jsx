@@ -14,7 +14,7 @@ export default function Title({
       <h3 className="book-author-h3">{author}</h3>
 
       <div className="title-btn-container">
-        <button type="button" className="btn-type-2 book-author-h3 right-line">Comments</button>
+        <button type="button" className="btn-type-2 book-author-h3">Comments</button>
         <button
           className="btn-type-2 book-author-h3 right-line"
           type="button"

@@ -2,19 +2,28 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
 :root {
-  --padding: 5rem 6rem;
-  --headerHoriPadding: 6rem;
+  --padding: 9.2rem 6.25rem;
+  --headerHoriPadding: 6.2rem;
   --addNewBookForm: row;
+  --bookligrid: 2fr 1fr;
+  --chapterPadLeft: 3.8rem;
+  --chapterPadTop: 0;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1100px) {
     --padding: 1rem 2rem;
     --headerHoriPadding: 2rem;
+    --bookligrid: 1fr;
+    --chapterPadLeft: 1.8rem;
+    --chapterPadTop: 0.5rem;
   }
 
   @media screen and (max-width: 765px) {
     --padding: 1rem 1rem;
     --addNewBookForm: column;
     --headerHoriPadding: 1rem;
+    --bookligrid: 1fr;
+    --chapterPadLeft: 0.5rem;
+    --chapterPadTop: 0.5rem;
   }
 }
 
@@ -36,7 +45,7 @@ body {
   border-radius: 4px;
   background: #fff;
   min-height: 40rem;
-  max-height: 70rem;
+  max-height: 100rem;
   overflow: auto;
   padding-bottom: 7rem;
 }
@@ -89,23 +98,23 @@ body {
 }
 
 .books {
-  padding: 1rem var(--headerHoriPadding);
+  padding: 0 var(--headerHoriPadding);
+  padding-bottom: 16rem;
 }
 
 .book-li {
   padding: 2rem 1.7rem;
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: var(--bookligrid);
   margin: 0.2em 0;
 }
 
 .book-li-part-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  gap: 3rem;
-  text-align: left;
+  grid-template-columns: 0.8fr 1fr;
+  justify-content: flex-start;
+  gap: 0.2rem;
 }
 
 .circular-progress {
@@ -119,12 +128,26 @@ body {
   align-items: center;
   gap: 0.5rem;
   margin-top: 0.7rem;
+  justify-content: center;
+  padding-right: var(--chapterPadLeft);
+  padding-top: var(--chapterPadTop);
+  border-right: 0.1rem solid #dadada;
 }
 
 .percentage {
   font-family: Montserrat, fantasy;
   font-size: 2rem;
   color: #121212;
+}
+
+.chapter-container {
+  padding-left: var(--chapterPadLeft);
+  padding-top: var(--chapterPadTop);
+}
+
+.child-chapter-container {
+  margin: auto;
+  width: 19rem;
 }
 
 .current-chapter {
@@ -145,7 +168,13 @@ body {
   margin-bottom: 1rem;
 }
 
-.addnewbook {
+.add-newB-container {
+  border-top: 0.2rem solid #e8e8e8;
+  margin-top: 2.5rem;
+  padding-top: 1.8rem;
+}
+
+.addnewbook-form {
   display: flex;
   flex-direction: var(--addNewBookForm);
   gap: 2em;
@@ -154,6 +183,7 @@ body {
 
 .anb-input {
   flex: 1;
+  height: 2.8rem;
   font-size: 1.2em;
   font-family: Montserrat, fantasy;
   letter-spacing: -0.15px;
@@ -167,13 +197,13 @@ body {
 }
 
 .btn-type1 {
-  min-width: 5rem;
-  padding: 0.5rem 1.5rem;
-  font-size: 1em;
+  width: 11.5rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9em;
   background: #0290ff;
   border-radius: 0.2rem;
   border: none;
-  font-family: RobotoSlab, fantasy;
+  font-family: Roboto, fantasy;
   font-weight: 300;
   letter-spacing: 0.5px;
   text-align: center;
@@ -200,6 +230,7 @@ body {
 
 .anb-button {
   width: 11rem;
+  height: 2.8rem;
   font-family: Roboto, fantasy;
   font-size: 1rem;
   font-weight: bold;
@@ -245,7 +276,6 @@ body {
   font-weight: bold;
   letter-spacing: -0.18px;
   color: #888;
-  margin-top: 4.5rem;
   margin-bottom: 1rem;
 }
 
@@ -255,5 +285,7 @@ body {
 
 .right-line {
   border-right: 0.1rem solid #dadada;
+  border-left: 0.1rem solid #dadada;
+  padding-left: 1rem;
   padding-right: 1rem;
 }
