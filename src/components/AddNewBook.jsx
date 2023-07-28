@@ -31,11 +31,15 @@ export default function AddNewBook() {
   }, [amount, dispatch]);
 
   return (
-    <form className="addnewbook" onSubmit={handleSubmit}>
-      <input className="anb-input" required name="title" type="text" placeholder="title" />
-      <input className="anb-input" required name="author" type="text" placeholder="author" />
+    <div>
+      <header className="add-nb-title">ADD NEW BOOK</header>
+      <form className="addnewbook" onSubmit={handleSubmit}>
+        <input className="anb-input" required name="title" type="text" placeholder="Book Title" />
+        <input className="anb-input" required name="author" type="text" placeholder="Author" />
 
-      <button className="anb-button btn-type1" type="submit">Add</button>
-    </form>
+        <button className="anb-button btn-type1" type="submit">ADD BOOK</button>
+      </form>
+    </div>
+
   );
 }

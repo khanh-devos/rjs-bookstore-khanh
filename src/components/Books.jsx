@@ -8,7 +8,6 @@ export default function Books() {
 
   return (
     <div className="books">
-      <AddNewBook />
 
       <ul className="books-ul">
         {
@@ -17,10 +16,15 @@ export default function Books() {
           key={uuidv4()}
           title={book.title}
           itemId={book.item_id}
+          category={book.category}
+          author={book.author}
         />
       ))
       }
       </ul>
+
+      <AddNewBook />
+
     </div>
   );
 }
