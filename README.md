@@ -8,7 +8,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  <!-- - [🚀 Live Demo & Video](#live-demo) -->
+  - [🚀 Live Demo & Video](#live-demo)
 - [💻 Getting Started ](#-getting-started-)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -54,9 +54,9 @@
 
 <!-- LIVE DEMO -->
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://khanh-devos.github.io/math-magics-k/) -->
+- [Live Demo Link](https://khanh-devos.github.io/rjs-bookstore-khanh/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
