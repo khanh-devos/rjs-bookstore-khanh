@@ -149,7 +149,7 @@ To run tests, run the following command:
 
 - GitHub: [khanh-devos](https://github.com/khanh-devos)
 - Twitter: [@khanhror](https://twitter.com/home?lang=en)
-- LinkedIn: [Khanh RoR](https://www.linkedin.com/in/khanh-than-trong-3b4344246/)
+- LinkedIn: [Khanh RoR](https://www.linkedin.com/in/khanh-dom/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
