@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
 
-      <BrowserRouter className="browser">
+      <BrowserRouter className="browser" basename="rjs-bookstore-khanh">
         <header className="header">
           <h1 className="header-h1">
             Bookstore CMS
