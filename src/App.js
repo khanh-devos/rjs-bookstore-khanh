@@ -9,6 +9,7 @@ import Categories from './components/Categories';
 import Books from './components/Books';
 import { fetchGetBooks } from './redux/books/bookSlice';
 import { FaceIcon } from './icons';
+import Fourpage from './404page';
 
 function App() {
   const dispatch = useDispatch();
@@ -54,7 +55,11 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Books />} />
-          <Route path="/categories" element={<Categories />} />
+          <Route
+            path="/categories"
+            element={<Categories />}
+          />
+          <Route path="*" element={<Fourpage />} />
         </Routes>
       </BrowserRouter>
     </div>
